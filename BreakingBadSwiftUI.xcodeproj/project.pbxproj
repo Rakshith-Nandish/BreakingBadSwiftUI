@@ -25,6 +25,10 @@
 		AC87ED76292455000007E67D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED75292455000007E67D /* Route.swift */; };
 		AC87ED79292455C60007E67D /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED78292455C60007E67D /* CharacterDetailView.swift */; };
 		AC87ED7B2924EEF30007E67D /* CharacterUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED7A2924EEF30007E67D /* CharacterUIModel.swift */; };
+		AC87ED7D29266C760007E67D /* CharacterDetailViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED7C29266C760007E67D /* CharacterDetailViewInteractor.swift */; };
+		AC87ED7F292670500007E67D /* QuoteInfoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED7E292670500007E67D /* QuoteInfoDataModel.swift */; };
+		AC87ED81292670C60007E67D /* GetAuthorQuotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED80292670C60007E67D /* GetAuthorQuotesService.swift */; };
+		AC87ED83292681150007E67D /* AuthorQuotesUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED82292681150007E67D /* AuthorQuotesUIModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		AC87ED75292455000007E67D /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		AC87ED78292455C60007E67D /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		AC87ED7A2924EEF30007E67D /* CharacterUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUIModel.swift; sourceTree = "<group>"; };
+		AC87ED7C29266C760007E67D /* CharacterDetailViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewInteractor.swift; sourceTree = "<group>"; };
+		AC87ED7E292670500007E67D /* QuoteInfoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteInfoDataModel.swift; sourceTree = "<group>"; };
+		AC87ED80292670C60007E67D /* GetAuthorQuotesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAuthorQuotesService.swift; sourceTree = "<group>"; };
+		AC87ED82292681150007E67D /* AuthorQuotesUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorQuotesUIModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +87,9 @@
 		AC87ED48292407E60007E67D /* BreakingBadSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				AC87ED77292455AF0007E67D /* CharacterDetailView */,
 				AC87ED74292454EF0007E67D /* Navigation */,
 				AC87ED6329240EA30007E67D /* DataModels */,
+				AC87ED77292455AF0007E67D /* CharacterDetailView */,
 				AC87ED6029240A180007E67D /* CharacterListView */,
 				AC87ED572924089C0007E67D /* Networking */,
 				AC87ED49292407E60007E67D /* BreakingBadSwiftUIApp.swift */,
@@ -125,6 +133,7 @@
 			children = (
 				AC87ED6629240FD50007E67D /* CharacterInfoModel.swift */,
 				AC87ED7029241CBD0007E67D /* CharacterInfoDomainModel.swift */,
+				AC87ED7E292670500007E67D /* QuoteInfoDataModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -145,6 +154,7 @@
 			children = (
 				AC87ED6C292413190007E67D /* GetAllCharactersService.swift */,
 				AC87ED72292454360007E67D /* GetCharacterDetailService.swift */,
+				AC87ED80292670C60007E67D /* GetAuthorQuotesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -161,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				AC87ED78292455C60007E67D /* CharacterDetailView.swift */,
+				AC87ED7C29266C760007E67D /* CharacterDetailViewInteractor.swift */,
+				AC87ED82292681150007E67D /* AuthorQuotesUIModel.swift */,
 			);
 			path = CharacterDetailView;
 			sourceTree = "<group>";
@@ -237,6 +249,7 @@
 			files = (
 				AC87ED79292455C60007E67D /* CharacterDetailView.swift in Sources */,
 				AC87ED6729240FD50007E67D /* CharacterInfoModel.swift in Sources */,
+				AC87ED7F292670500007E67D /* QuoteInfoDataModel.swift in Sources */,
 				AC87ED6F292416360007E67D /* CharacterListViewModel.swift in Sources */,
 				AC87ED5F292409950007E67D /* NetworkManager.swift in Sources */,
 				AC87ED7129241CBD0007E67D /* CharacterInfoDomainModel.swift in Sources */,
@@ -247,9 +260,12 @@
 				AC87ED5D292409770007E67D /* RequestError.swift in Sources */,
 				AC87ED59292409090007E67D /* EndPoint.swift in Sources */,
 				AC87ED6D292413190007E67D /* GetAllCharactersService.swift in Sources */,
+				AC87ED7D29266C760007E67D /* CharacterDetailViewInteractor.swift in Sources */,
 				AC87ED69292410E60007E67D /* BreakingBadEndPoint.swift in Sources */,
 				AC87ED7B2924EEF30007E67D /* CharacterUIModel.swift in Sources */,
 				AC87ED4C292407E60007E67D /* ContentView.swift in Sources */,
+				AC87ED83292681150007E67D /* AuthorQuotesUIModel.swift in Sources */,
+				AC87ED81292670C60007E67D /* GetAuthorQuotesService.swift in Sources */,
 				AC87ED4A292407E60007E67D /* BreakingBadSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

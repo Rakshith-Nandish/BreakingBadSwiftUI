@@ -11,7 +11,7 @@ import SwiftUI
 struct BreakingBadSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            CharacterListView()
+            CharacterDetailView()
         }
     }
 }

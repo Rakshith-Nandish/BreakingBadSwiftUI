@@ -10,6 +10,7 @@ import Foundation
 enum BreakingBadEndPoint {
     case getAllCharacters
     case getCharacterDetail(characterId: String)
+    case getQuotes(authorName: String)
 }
 
 extension BreakingBadEndPoint: Endpoint {
@@ -19,12 +20,14 @@ extension BreakingBadEndPoint: Endpoint {
             return "/api/characters"
         case .getCharacterDetail(let characterId):
             return "/api/characters/" + characterId
+        case .getQuotes:
+            return "/api/quote"
         }
     }
     
     var method: RequestMethod {
         switch self {
-        case .getAllCharacters, .getCharacterDetail:
+        case .getAllCharacters, .getCharacterDetail, .getQuotes:
             return .get
         }
     }
@@ -38,6 +41,22 @@ extension BreakingBadEndPoint: Endpoint {
     }
     
     var queryItem: [URLQueryItem]? {
-        return nil
+        switch self {
+        case .getAllCharacters, .getCharacterDetail:
+            return nil
+        case .getQuotes(let authorName):
+            let splitAuthoName = authorName.split(separator: " ")
+            var authoNameQuery = ""
+            if !splitAuthoName.isEmpty {
+                for item in splitAuthoName {
+                    authoNameQuery += item
+                    authoNameQuery += "+"
+                }
+            }
+            authoNameQuery = String(authoNameQuery.dropLast())
+            
+            let queryTerm = "author"
+            return [URLQueryItem(name: queryTerm, value: authoNameQuery)]
+        }
     }
 }
