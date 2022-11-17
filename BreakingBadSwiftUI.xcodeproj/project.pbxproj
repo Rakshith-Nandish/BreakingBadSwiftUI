@@ -35,6 +35,7 @@
 		AC87ED9C2926C4F90007E67D /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED9B2926C4F90007E67D /* MockServices.swift */; };
 		AC87ED9E2926C8F70007E67D /* GetAuthorQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = AC87ED9D2926C8F70007E67D /* GetAuthorQuotes.json */; };
 		AC87EDA02926CA680007E67D /* GetCharacterDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = AC87ED9F2926CA680007E67D /* GetCharacterDetail.json */; };
+		AC87EDA22926CF550007E67D /* Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = AC87EDA12926CF550007E67D /* Questions.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		AC87ED9B2926C4F90007E67D /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
 		AC87ED9D2926C8F70007E67D /* GetAuthorQuotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = GetAuthorQuotes.json; path = BreakingBadSwiftUI/GetAuthorQuotes.json; sourceTree = SOURCE_ROOT; };
 		AC87ED9F2926CA680007E67D /* GetCharacterDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = GetCharacterDetail.json; path = BreakingBadSwiftUI/GetCharacterDetail.json; sourceTree = SOURCE_ROOT; };
+		AC87EDA12926CF550007E67D /* Questions.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Questions.md; path = BreakingBadSwiftUI/Questions.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		AC87ED3D292407E60007E67D = {
 			isa = PBXGroup;
 			children = (
+				AC87EDA12926CF550007E67D /* Questions.md */,
 				AC87ED48292407E60007E67D /* BreakingBadSwiftUI */,
 				AC87ED8D2926C1AA0007E67D /* BreakingBadSwiftUITests */,
 				AC87ED47292407E60007E67D /* Products */,
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC87ED51292407EA0007E67D /* Preview Assets.xcassets in Resources */,
+				AC87EDA22926CF550007E67D /* Questions.md in Resources */,
 				AC87ED4E292407EA0007E67D /* Assets.xcassets in Resources */,
 				AC87ED9E2926C8F70007E67D /* GetAuthorQuotes.json in Resources */,
 				AC87EDA02926CA680007E67D /* GetCharacterDetail.json in Resources */,
