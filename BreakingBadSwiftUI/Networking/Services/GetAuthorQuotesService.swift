@@ -11,7 +11,7 @@ protocol GetAuthorQuotesServicable {
     func getAuthorQuotesFor(author: String)  async -> Result<[QuoteInfoDataModel], RequestError>
 }
 
-final class GetAuthorQuoteService: HTTPClient, GetAuthorQuotesServicable {
+class GetAuthorQuoteService: HTTPClient, GetAuthorQuotesServicable {
     func getAuthorQuotesFor(author: String) async -> Result<[QuoteInfoDataModel], RequestError> {
         return await sendRequest(endpoint: BreakingBadEndPoint.getQuotes(authorName: author),
                            responseModel: [QuoteInfoDataModel].self)

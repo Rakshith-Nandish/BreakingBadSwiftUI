@@ -173,9 +173,9 @@
             filePath = "BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "fetchAllDetails(authorName:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "fetchCharacterDetails(authorName:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -221,25 +221,9 @@
             filePath = "BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "fetchAllDetails(authorName:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DC3AD48E-9488-41C2-896D-D6EF7D9DDD1B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "fetchCharacterDetails(authorName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

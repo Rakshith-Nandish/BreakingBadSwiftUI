@@ -27,7 +27,13 @@ class CharacterDetailViewInteractor: ObservableObject {
         self.selectedCharacterUIModel = selectedCharacterUIModel
     }
     
-    func fetchAllDetails(authorName: String) async {
+    func viewDidLoad() {
+        Task {
+            await fetchCharacterDetails(authorName: selectedCharacterUIModel.name)
+        }
+    }
+
+    func fetchCharacterDetails(authorName: String) async {
         async let resultQuotes = getAllQuotesService.getAuthorQuotesFor(author: authorName)
         
         async let resultCharactertDetails = getCharacterDetailService.getCharacterDetailFor(
@@ -45,12 +51,6 @@ class CharacterDetailViewInteractor: ObservableObject {
         default:
             //Display error
             return
-        }
-    }
-    
-    func viewDidLoad() {
-        Task {
-            await fetchAllDetails(authorName: selectedCharacterUIModel.name)
         }
     }
     

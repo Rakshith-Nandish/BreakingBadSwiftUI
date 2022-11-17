@@ -11,7 +11,7 @@ protocol GetCharacterDetailServicable {
     func getCharacterDetailFor(id: String) async -> Result<[CharacterInfoDataModel], RequestError>
 }
 
-final class GetCharacterDetailService: HTTPClient, GetCharacterDetailServicable {
+class GetCharacterDetailService: HTTPClient, GetCharacterDetailServicable {
     func getCharacterDetailFor(id: String) async -> Result<[CharacterInfoDataModel], RequestError> {
         return await sendRequest(endpoint: BreakingBadEndPoint.getCharacterDetail(characterId: id),
                            responseModel: [CharacterInfoDataModel].self)
