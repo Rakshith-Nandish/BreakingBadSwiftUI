@@ -25,19 +25,5 @@ struct CharacterInfoDataModel: Codable {
         case bcsAppearance = "better_call_saul_appearance"
         case name, birthday, occupation, img, status, nickname, appearance, portrayed, category
     }
-    
-    func toDomain() -> CharacterInfoDomainModel {
-        return CharacterInfoDomainModel(id: id,
-                                        name: "",
-                                        birthday: "",
-                                        occupation: [],
-                                        img: "",
-                                        status: "",
-                                        nickname: "",
-                                        appearance: [],
-                                        portrayed: "",
-                                        category: "",
-                                        bcsAppearance: [])
-    }
 }
 

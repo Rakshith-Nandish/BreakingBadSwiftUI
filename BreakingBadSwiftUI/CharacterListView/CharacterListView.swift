@@ -15,7 +15,7 @@ struct CharacterListView: View {
         NavigationView {
             List(viewModel.listCharacterUIModels, id: \.id) {
                 character in
-                Navigator.navigate(route: .detail(artistId: String(character.id))) {
+                Navigator.navigate(route: .detail(characterUIModel: character)) {
                     getListItemView(characterUIModel: character)
                 }
             }

@@ -12,24 +12,24 @@ class CharacterDetailViewInteractor: ObservableObject {
     var getAllQuotesService: GetAuthorQuotesServicable
     var getCharacterDetailService: GetCharacterDetailServicable
     
+    private var selectedCharacterUIModel: CharacterUIModel
+    
     @Published var listAuthorQuotes: [AuthorQuotesUIModel] = []
     @Published var characterName = ""
     @Published var characterPortrayedBy = ""
     @Published var characterImageUrl = URL(string: "")
     
-    init() {
+    init(selectedCharacterUIModel: CharacterUIModel) {
         getAllQuotesService =  GetAuthorQuoteService()
         getCharacterDetailService =  GetCharacterDetailService()
-        
-        Task {
-            await fetchAllDetails(authorName: "Jesse Pinkman")
-        }
+        self.selectedCharacterUIModel = selectedCharacterUIModel
     }
     
     func fetchAllDetails(authorName: String) async {
         async let resultQuotes = getAllQuotesService.getAuthorQuotesFor(author: authorName)
         
-        async let resultCharactertDetails = getCharacterDetailService.getCharacterDetailFor(id: String(1))
+        async let resultCharactertDetails = getCharacterDetailService.getCharacterDetailFor(
+            id: String(selectedCharacterUIModel.id))
         
         let result = await (quotes: resultQuotes, characterDetail: resultCharactertDetails)
         
@@ -46,14 +46,9 @@ class CharacterDetailViewInteractor: ObservableObject {
         }
     }
     
-    func fetchCharacterQuotes(authorName: String) async {
-        let result = await getCharacterDetailService.getCharacterDetailFor(id: String(1))
-        
-        switch result {
-        case .success(let model):
-            print(model)
-        case .failure(let error):
-            print(error)
+    func viewDidLoad() {
+        Task {
+            await fetchAllDetails(authorName: selectedCharacterUIModel.name)
         }
     }
     

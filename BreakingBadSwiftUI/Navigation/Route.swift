@@ -9,16 +9,16 @@ import Foundation
 import SwiftUI
 
 enum Route {
-    case detail(artistId: String)
+    case detail(characterUIModel: CharacterUIModel)
 }
 
 
 struct Navigator {
     static func navigate<T: View>(route: Route, content: () -> T) -> AnyView {
         switch route {
-        case .detail(let artistId):
+        case .detail(let characterUIModel):
             return AnyView(
-                NavigationLink(destination: CharacterDetailView()) {
+                NavigationLink(destination: CharacterDetailView(characterUIModel: characterUIModel)) {
                 content()
             })
         }

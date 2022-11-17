@@ -8,28 +8,23 @@
 import SwiftUI
 
 struct CharacterDetailView: View {
-    let arrayItems = ["Amitab", "Aftaab", "Sonali Bendre"]
     
-    @ObservedObject var viewInteractor: CharacterDetailViewInteractor = CharacterDetailViewInteractor()
+    @ObservedObject var viewInteractor: CharacterDetailViewInteractor
+    
+    init(characterUIModel: CharacterUIModel) {
+        self.viewInteractor = CharacterDetailViewInteractor(selectedCharacterUIModel: characterUIModel)
+    }
     
     var body: some View {
         ZStack {
             VStack(alignment: .center, spacing: 5) {
                 Spacer(minLength: 2)
-//                Image("bannerImage")
-//                    .resizable()
-//                    .scaledToFit()
-//                    .frame(width: UIScreen.main.bounds.size.width - 10,
-//                           height: 350,
-//                           alignment: .center)
-//                    .background(.black)
                 
                 AsyncImage(
                     url: viewInteractor.characterImageUrl,
                     content: { image in
                         image.resizable()
                             .scaledToFit()
-//                            .aspectRatio(contentMode: .fit)
                             .frame(maxWidth: UIScreen.main.bounds.size.width - 10, maxHeight: 350)
                     },
                     placeholder: {
@@ -46,7 +41,7 @@ struct CharacterDetailView: View {
                             .fontWeight(.semibold)
 
                         Text(viewInteractor.characterPortrayedBy)
-                            .font(.custom("Arial", size: 10))
+                            .font(.custom("Arial", size: 12))
                             .fontWeight(.light)
                             .padding(.bottom, 3)
                     }.padding(.leading, 10)
@@ -61,12 +56,17 @@ struct CharacterDetailView: View {
                     UITableView.appearance().contentInset.top = -20
                 })
             }
+        }.onAppear {
+            viewInteractor.viewDidLoad()
         }
     }
 }
 
 struct CharacterDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterDetailView()
+        CharacterDetailView(characterUIModel: CharacterUIModel(id: 0,
+                                                               name: "",
+                                                               liked: true,
+                                                               disliked: true))
     }
 }
