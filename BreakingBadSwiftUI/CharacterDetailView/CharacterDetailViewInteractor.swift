@@ -19,9 +19,11 @@ class CharacterDetailViewInteractor: ObservableObject {
     @Published var characterPortrayedBy = ""
     @Published var characterImageUrl = URL(string: "")
     
-    init(selectedCharacterUIModel: CharacterUIModel) {
-        getAllQuotesService =  GetAuthorQuoteService()
-        getCharacterDetailService =  GetCharacterDetailService()
+    init(selectedCharacterUIModel: CharacterUIModel,
+         getAllQuotesService: GetAuthorQuotesServicable,
+         getCharacterDetailService: GetCharacterDetailServicable) {
+        self.getAllQuotesService =  getAllQuotesService
+        self.getCharacterDetailService =  getCharacterDetailService
         self.selectedCharacterUIModel = selectedCharacterUIModel
     }
     

@@ -11,8 +11,8 @@ struct CharacterDetailView: View {
     
     @ObservedObject var viewInteractor: CharacterDetailViewInteractor
     
-    init(characterUIModel: CharacterUIModel) {
-        self.viewInteractor = CharacterDetailViewInteractor(selectedCharacterUIModel: characterUIModel)
+    init(viewInteractor: CharacterDetailViewInteractor) {
+        self.viewInteractor = viewInteractor
     }
     
     var body: some View {
@@ -64,9 +64,9 @@ struct CharacterDetailView: View {
 
 struct CharacterDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterDetailView(characterUIModel: CharacterUIModel(id: 0,
-                                                               name: "",
-                                                               liked: true,
-                                                               disliked: true))
+        CharacterDetailView(viewInteractor: CharacterDetailViewInteractor(
+            selectedCharacterUIModel: CharacterUIModel(id: 1, name: "", liked: true, disliked: true),
+            getAllQuotesService: GetAuthorQuoteService(),
+            getCharacterDetailService: GetCharacterDetailService()))
     }
 }
