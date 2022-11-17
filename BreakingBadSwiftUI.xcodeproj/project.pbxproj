@@ -19,7 +19,7 @@
 		AC87ED6729240FD50007E67D /* CharacterInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED6629240FD50007E67D /* CharacterInfoModel.swift */; };
 		AC87ED69292410E60007E67D /* BreakingBadEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED68292410E60007E67D /* BreakingBadEndPoint.swift */; };
 		AC87ED6D292413190007E67D /* GetAllCharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED6C292413190007E67D /* GetAllCharactersService.swift */; };
-		AC87ED6F292416360007E67D /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED6E292416360007E67D /* CharacterListViewModel.swift */; };
+		AC87ED6F292416360007E67D /* CharacterListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED6E292416360007E67D /* CharacterListInteractor.swift */; };
 		AC87ED7129241CBD0007E67D /* CharacterInfoDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED7029241CBD0007E67D /* CharacterInfoDomainModel.swift */; };
 		AC87ED73292454360007E67D /* GetCharacterDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED72292454360007E67D /* GetCharacterDetailService.swift */; };
 		AC87ED76292455000007E67D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87ED75292455000007E67D /* Route.swift */; };
@@ -45,7 +45,7 @@
 		AC87ED6629240FD50007E67D /* CharacterInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfoModel.swift; sourceTree = "<group>"; };
 		AC87ED68292410E60007E67D /* BreakingBadEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBadEndPoint.swift; sourceTree = "<group>"; };
 		AC87ED6C292413190007E67D /* GetAllCharactersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCharactersService.swift; sourceTree = "<group>"; };
-		AC87ED6E292416360007E67D /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		AC87ED6E292416360007E67D /* CharacterListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListInteractor.swift; sourceTree = "<group>"; };
 		AC87ED7029241CBD0007E67D /* CharacterInfoDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfoDomainModel.swift; sourceTree = "<group>"; };
 		AC87ED72292454360007E67D /* GetCharacterDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterDetailService.swift; sourceTree = "<group>"; };
 		AC87ED75292455000007E67D /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				AC87ED6129240A770007E67D /* CharacterListView.swift */,
-				AC87ED6E292416360007E67D /* CharacterListViewModel.swift */,
+				AC87ED6E292416360007E67D /* CharacterListInteractor.swift */,
 				AC87ED7A2924EEF30007E67D /* CharacterUIModel.swift */,
 			);
 			path = CharacterListView;
@@ -250,7 +250,7 @@
 				AC87ED79292455C60007E67D /* CharacterDetailView.swift in Sources */,
 				AC87ED6729240FD50007E67D /* CharacterInfoModel.swift in Sources */,
 				AC87ED7F292670500007E67D /* QuoteInfoDataModel.swift in Sources */,
-				AC87ED6F292416360007E67D /* CharacterListViewModel.swift in Sources */,
+				AC87ED6F292416360007E67D /* CharacterListInteractor.swift in Sources */,
 				AC87ED5F292409950007E67D /* NetworkManager.swift in Sources */,
 				AC87ED7129241CBD0007E67D /* CharacterInfoDomainModel.swift in Sources */,
 				AC87ED5B292409290007E67D /* RequestMethod.swift in Sources */,

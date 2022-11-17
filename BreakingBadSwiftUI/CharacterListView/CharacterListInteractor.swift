@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CharacterListViewModel: ObservableObject {
+class CharacterListInteractor: ObservableObject {
     
     @Published var listCharacterUIModels: [CharacterUIModel] = []
     
@@ -31,6 +31,7 @@ class CharacterListViewModel: ObservableObject {
             print(error)
         }
     }
+
     
     @MainActor
     func configureUIModels(dataModelList: [CharacterInfoDataModel]) {

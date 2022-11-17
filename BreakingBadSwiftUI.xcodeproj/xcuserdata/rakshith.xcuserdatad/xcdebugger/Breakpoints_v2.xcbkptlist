@@ -56,7 +56,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DD135E88-F99E-4017-8808-7FEB44471DF6"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreakingBadSwiftUI/Networking/Base/NetworkManager.swift"
@@ -173,57 +173,10 @@
             filePath = "BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "fetchCharacterQuotes(authorName:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "108FB86E-98C7-42C5-8832-8CACBC6C2488 - ec71eee94f8ccfa1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) await resume partial function for BreakingBadSwiftUI.CharacterDetailViewInteractor.fetchCharacterQuotes(authorName: Swift.String) async -&gt; ()"
-                  moduleName = "BreakingBadSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rakshith/Documents/Rakshith/iOS/BreakingBadSwiftUI/BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "195">
-               </Location>
-               <Location
-                  uuid = "108FB86E-98C7-42C5-8832-8CACBC6C2488 - 5e6db13f7aaa58ab"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) suspend resume partial function for BreakingBadSwiftUI.CharacterDetailViewInteractor.fetchCharacterQuotes(authorName: Swift.String) async -&gt; ()"
-                  moduleName = "BreakingBadSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rakshith/Documents/Rakshith/iOS/BreakingBadSwiftUI/BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "21">
-               </Location>
-               <Location
-                  uuid = "108FB86E-98C7-42C5-8832-8CACBC6C2488 - 531f9bec19b7f6ac"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for BreakingBadSwiftUI.CharacterDetailViewInteractor.fetchCharacterQuotes(authorName: Swift.String) async -&gt; ()"
-                  moduleName = "BreakingBadSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rakshith/Documents/Rakshith/iOS/BreakingBadSwiftUI/BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "61">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -236,57 +189,10 @@
             filePath = "BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "fetchCharacterQuotes(authorName:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "99FD5914-92C8-420E-A278-F3EAFC70EAC6 - ec71eee94f8ccfa1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) await resume partial function for BreakingBadSwiftUI.CharacterDetailViewInteractor.fetchCharacterQuotes(authorName: Swift.String) async -&gt; ()"
-                  moduleName = "BreakingBadSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rakshith/Documents/Rakshith/iOS/BreakingBadSwiftUI/BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "195">
-               </Location>
-               <Location
-                  uuid = "99FD5914-92C8-420E-A278-F3EAFC70EAC6 - 5e6db13f7aaa58ab"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) suspend resume partial function for BreakingBadSwiftUI.CharacterDetailViewInteractor.fetchCharacterQuotes(authorName: Swift.String) async -&gt; ()"
-                  moduleName = "BreakingBadSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rakshith/Documents/Rakshith/iOS/BreakingBadSwiftUI/BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "21">
-               </Location>
-               <Location
-                  uuid = "99FD5914-92C8-420E-A278-F3EAFC70EAC6 - 531f9bec19b7f6ac"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for BreakingBadSwiftUI.CharacterDetailViewInteractor.fetchCharacterQuotes(authorName: Swift.String) async -&gt; ()"
-                  moduleName = "BreakingBadSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rakshith/Documents/Rakshith/iOS/BreakingBadSwiftUI/BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "61">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -299,9 +205,73 @@
             filePath = "BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "fetchCharacterQuotes(authorName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F5CD94D-B56D-4A6A-86D5-AACF9DE231A8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "fetchAllDetails(authorName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0F5CD94D-B56D-4A6A-86D5-AACF9DE231A8 - e15733ba6ebd8c1a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) suspend resume partial function for BreakingBadSwiftUI.CharacterDetailViewInteractor.fetchAllDetails(authorName: Swift.String) async -&gt; ()"
+                  moduleName = "BreakingBadSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rakshith/Documents/Rakshith/iOS/BreakingBadSwiftUI/BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "382">
+               </Location>
+               <Location
+                  uuid = "0F5CD94D-B56D-4A6A-86D5-AACF9DE231A8 - e4aba26b075f9611"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for BreakingBadSwiftUI.CharacterDetailViewInteractor.fetchAllDetails(authorName: Swift.String) async -&gt; ()"
+                  moduleName = "BreakingBadSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rakshith/Documents/Rakshith/iOS/BreakingBadSwiftUI/BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D70DBB9-95C3-4646-BC59-199A758C3E2F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreakingBadSwiftUI/CharacterDetailView/CharacterDetailViewInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "fetchAllDetails(authorName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -16,23 +16,36 @@ struct CharacterDetailView: View {
         ZStack {
             VStack(alignment: .center, spacing: 5) {
                 Spacer(minLength: 2)
-                Image("bannerImage")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: UIScreen.main.bounds.size.width - 10,
-                           height: 350,
-                           alignment: .center)
-                    .background(.black)
+//                Image("bannerImage")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: UIScreen.main.bounds.size.width - 10,
+//                           height: 350,
+//                           alignment: .center)
+//                    .background(.black)
+                
+                AsyncImage(
+                    url: viewInteractor.characterImageUrl,
+                    content: { image in
+                        image.resizable()
+                            .scaledToFit()
+//                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: UIScreen.main.bounds.size.width - 10, maxHeight: 350)
+                    },
+                    placeholder: {
+                        ProgressView()
+                    }
+                )
                 
                 Spacer()
                 
                 HStack {
                     VStack(alignment: .leading, spacing: 12) {
-                        Text("Character Name")
+                        Text(viewInteractor.characterName)
                             .font(.custom("Arial", size: 20))
                             .fontWeight(.semibold)
 
-                        Text("Played by:")
+                        Text(viewInteractor.characterPortrayedBy)
                             .font(.custom("Arial", size: 10))
                             .fontWeight(.light)
                             .padding(.bottom, 3)
