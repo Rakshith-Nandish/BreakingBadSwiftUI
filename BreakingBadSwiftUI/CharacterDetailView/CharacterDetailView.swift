@@ -17,48 +17,64 @@ struct CharacterDetailView: View {
     
     var body: some View {
         ZStack {
-            VStack(alignment: .center, spacing: 5) {
-                Spacer(minLength: 2)
-                
-                AsyncImage(
-                    url: viewInteractor.characterImageUrl,
-                    content: { image in
-                        image.resizable()
-                            .scaledToFit()
-                            .frame(maxWidth: UIScreen.main.bounds.size.width - 10, maxHeight: 350)
-                    },
-                    placeholder: {
-                        ProgressView()
-                    }
-                )
-                
-                Spacer()
-                
-                HStack {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text(viewInteractor.characterName)
-                            .font(.custom("Arial", size: 20))
-                            .fontWeight(.semibold)
-
-                        Text(viewInteractor.characterPortrayedBy)
-                            .font(.custom("Arial", size: 12))
-                            .fontWeight(.light)
-                            .padding(.bottom, 3)
-                    }.padding(.leading, 10)
+            if case .loading = viewInteractor.viewState {
+                getLoader()
+            }
+            else if case .display = viewInteractor.viewState {
+                VStack(alignment: .center, spacing: 5) {
+                    Spacer(minLength: 2)
+                    
+                    AsyncImage(
+                        url: viewInteractor.characterImageUrl,
+                        content: { image in
+                            image.resizable()
+                                .scaledToFit()
+                        },
+                        placeholder: {
+                        }
+                    )
+                        .frame(maxWidth: UIScreen.main.bounds.size.width - 10, maxHeight: 350)
                     
                     Spacer()
-                }.frame(width: UIScreen.main.bounds.size.width)
-                
-                List(viewInteractor.listAuthorQuotes, id: \.id) { authorItem in
-                    Text(authorItem.quote)
-                        .padding()
-                }.onAppear(perform: {
-                    UITableView.appearance().contentInset.top = -20
-                })
+                    
+                    HStack {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text(viewInteractor.characterName)
+                                .font(.custom("Arial", size: 20))
+                                .fontWeight(.semibold)
+
+                            Text(viewInteractor.characterPortrayedBy)
+                                .font(.custom("Arial", size: 12))
+                                .fontWeight(.light)
+                                .padding(.bottom, 3)
+                        }.padding(.leading, 10)
+                        
+                        Spacer()
+                    }.frame(width: UIScreen.main.bounds.size.width)
+                    
+                    List(viewInteractor.listAuthorQuotes, id: \.id) { authorItem in
+                        Text(authorItem.quote)
+                            .padding()
+                    }.onAppear(perform: {
+                        UITableView.appearance().contentInset.top = 10
+                    })
+                }
+            }
+            else if case .error(let errorMessage) = viewInteractor.viewState {
+                Text(errorMessage)
+                    .padding()
+                    .background(.red)
+                    .foregroundColor(.white)
             }
         }.onAppear {
             viewInteractor.viewDidLoad()
         }
+    }
+    
+    private func getLoader() -> some View {
+        ProgressView()
+            .scaleEffect(1, anchor: .center)
+            .progressViewStyle(CircularProgressViewStyle(tint: .gray))
     }
 }
 
@@ -70,3 +86,17 @@ struct CharacterDetailView_Previews: PreviewProvider {
             getCharacterDetailService: GetCharacterDetailService()))
     }
 }
+
+//protocol ItemViewModel: ObservableObject {
+//    var title: String { get set }
+//    func foo()
+//}
+//struct ItemView<Model>: View where Model: ItemViewModel
+
+//class ConcreteItemModel: ItemViewModel {
+//    @Published var title: String
+//
+//    init(_ title: String) {
+//        self.title = title
+//    }
+//}

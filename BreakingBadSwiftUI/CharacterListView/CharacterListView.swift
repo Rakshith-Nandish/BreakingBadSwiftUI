@@ -13,15 +13,29 @@ struct CharacterListView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.listCharacterUIModels, id: \.id) {
-                character in
-                Navigator.navigate(route: .detail(characterUIModel: character)) {
-                    getListItemView(characterUIModel: character)
-                }
+            if case .loading = viewModel.viewState {
+                getLoader()
             }
-            .listStyle(.automatic)
-            .navigationTitle("Characters")
+            else if case .display = viewModel.viewState {
+                List(viewModel.listCharacterUIModels, id: \.id) {
+                    character in
+                    Navigator.navigate(route: .detail(characterUIModel: character)) {
+                        getListItemView(characterUIModel: character)
+                    }
+                }
+                .listStyle(.automatic)
+                .navigationTitle("Characters")
+            }
+            else if case .error = viewModel.viewState {
+                Text("Looks like something went wrong!!")
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(Color.white)
+            }
         }.navigationViewStyle(.stack)
+            .onAppear {
+                viewModel.viewDidLoad()
+            }
     }
     
     private func getListItemView(characterUIModel: CharacterUIModel) -> some View {
@@ -37,6 +51,12 @@ struct CharacterListView: View {
                     .foregroundColor(.black)
             }
         }.frame(height: 54)
+    }
+    
+    private func getLoader() -> some View {
+        ProgressView()
+            .scaleEffect(1, anchor: .center)
+            .progressViewStyle(CircularProgressViewStyle(tint: .gray))
     }
 }
 
